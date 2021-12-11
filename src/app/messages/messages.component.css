@@ -1,22 +1,20 @@
-h1 {
-  margin-bottom: 0;
+span {
+  font-size: 25px;
+  margin: 0 10px 0 0;
 }
-nav a {
-  padding: 1rem;
+a {
+  padding: 8px;
   text-decoration: none;
-  margin-top: 10px;
   display: inline-block;
   background-color: #e8e8e8;
   color: #3d3d3d;
   border-radius: 10px;
+  cursor: pointer;
 }
-nav a:hover {
+a:hover {
   color: white;
   background-color: #42545C;
 }
-nav a.active {
-  background-color: black;
-}
-.hero-list {
-  margin-left: 5px;
+.msg {
+  margin-top: 5px;
 }
