@@ -1,0 +1,13 @@
+<div class="mp-3">
+  <div class="input-group">
+    <div class="input-group-prepend">
+      <span class="input-group-text">Student Name:</span>
+    </div>
+    <div>
+      <input [(ngModel)]="newStudent" type="text" class="form-control" placeholder="Eg. Vincent Lester Togle">
+    </div>
+    <div>
+      <button class="btn btn-primary" (click)="addStudent.emit(newStudent)" >Add</button>
+    </div>
+  </div>
+</div>

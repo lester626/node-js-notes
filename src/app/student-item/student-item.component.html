@@ -1,0 +1,17 @@
+<div class="mb-2">
+  <span class="mr-2">{{student.name}}</span>
+  <span>
+    <button class="mr-1 btn btn-info" (click)="profileView = !profileView">Profile</button>
+  </span>
+  <span>
+    <button class="mr-1 btn btn-danger">X</button>
+  </span>
+</div>
+
+<div class="input-group row mb-2" *ngIf="profileView">
+  <span class="mr-2">Student ID: {{student.id}}</span>
+  <span class="mr-2">Student Name: {{student.name}}</span>
+  <span>
+    <button class="mr-1 btn btn-warning">&#9998;</button>
+  </span>
+</div>
