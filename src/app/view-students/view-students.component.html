@@ -1,0 +1,17 @@
+<section>
+  <div *ngIf="students.length == 0">
+    <h3>No students to show</h3>
+  </div>
+
+  <div>
+    <div class="row">
+      <div *ngFor="let student of students" class="col">
+        <div>
+          <img [src]="student.avatar" width="200px" height="auto">
+        </div>
+        <div>{{student.first_name}} {{student.last_name}}</div>
+        <div>{{student.email}}</div>
+      </div>
+    </div>
+  </div>
+</section>

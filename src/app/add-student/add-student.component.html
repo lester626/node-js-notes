@@ -1,0 +1,23 @@
+<section>
+  <h3>Add Student</h3>
+  <form [formGroup]="studentForm" (ngSubmit)="onSubmitStudentForm()">
+    <div class="mb-2">
+      <input id="firstName" formControlName="firstName" required class="form-control" placeholder="first name">
+    </div>
+    <div class="mb-2">
+      <input id="lastName" formControlName="lastName" required class="form-control" placeholder="last name">
+    </div>
+    <div class="mb-2">
+      <input id="age" formControlName="age" type="number" required class="form-control" placeholder="age">
+    </div>
+    <div class="mb-2">
+      <input id="email" formControlName="email" type="email" required class="form-control" placeholder="Email">
+    </div>
+    <div class="mb-2">
+      <input type="password" formControlName="password" required class="form-control" placeholder="Password">
+    </div>
+    <div class="mb-2">
+      <button type="submit" class="btn btn-success">Create Student</button>
+    </div>
+  </form>
+</section>

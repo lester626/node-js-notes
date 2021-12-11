@@ -1,0 +1,15 @@
+<section>
+  <h2>Registered Users {{users.length}}</h2>
+  <div class="p-1 m-1">
+    <ul class="">
+      <li class="m-1" *ngFor="let user of users">
+        <div>
+          <img class="" [src]="user.image" style="width: 120px" alt="profile picture">
+          <h4 class="">{{user.name}}</h4>
+        </div>
+        <p>{{user.about}}</p>
+        <p>{{user.location}}</p>
+      </li>
+    </ul>
+  </div>
+</section>
