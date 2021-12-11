@@ -1,0 +1,16 @@
+<a routerLink="/chat/users">See all users</a>
+<div>
+  <div *ngIf="user.id">
+    <h3>{{user.name}}</h3>
+    <div><img [src]="user.image" style="width: 200px" ]></div>
+    <div>{{user.location}}</div>
+    <div>{{user.about}}</div>
+    <div>{{user.phone}}</div>
+    <div>{{user.email}}</div>
+    <div>{{user.last_login}}</div>
+  </div>
+
+  <div *ngIf="!user.id">
+    Cannot get user profile
+  </div>
+</div>
