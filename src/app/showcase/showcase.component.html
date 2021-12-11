@@ -1,0 +1,28 @@
+<section>
+  <h3>See and manage your products</h3>
+  <input [(ngModel)]="product.name">
+  <select [(ngModel)]="product.category">
+    <option *ngFor="let category of categories">{{category}}</option>
+  </select>
+
+  <button (click)="addProduct()">Add Product</button>
+</section>
+
+<section>
+  <span>filter:</span>
+  <select>
+    <option *ngFor="let category of categories">{{category}}</option>
+  </select>
+  <button>&duarr;</button>
+</section>
+
+<section>
+  <ul>
+    <li *ngFor="let _product of products">
+      <h5>{{_product.name}}</h5>
+      <span>{{_product.category}}</span>
+      <br/>
+      <span>{{_product.isAvailable}}</span>
+    </li>
+  </ul>
+</section>
