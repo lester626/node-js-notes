@@ -1,0 +1,24 @@
+<div class="mb-2">
+  <span class="mr-2" [ngClass]="todo.isComplete ? 'mark-complete': ''">{{todo.task}}</span>
+  <span *ngIf="!todo.isComplete">
+    <button (click)="changeTodoStatus.emit(todo)" class="mr-1 btn btn-success">&checkmark;</button>
+  </span>
+  <span *ngIf="!todo.isComplete">
+    <button class="mr-1 btn btn-warning" (click)="editingEnabled = !editingEnabled">&#9998;</button>
+  </span>
+  <span (click)="changeTodoStatus.emit(todo)" *ngIf="todo.isComplete">
+    <button class="mr-1 btn btn-warning">&circlearrowleft;</button>
+  </span>
+  <span>
+    <button (click)="deleteTodo.emit(todo)" class="mr-1 btn btn-danger">X</button>
+  </span>
+</div>
+
+<div class="input-group row mb-2" *ngIf="editingEnabled">
+  <div class="col-xs-6">
+    <input class="form-control" type="text" [(ngModel)]="todo.task">
+  </div>
+  <div class="col-xs-4">
+    <button class="btn btn-success" (click)="updateTodo.emit(todo); editingEnabled = false">save</button>
+  </div>
+</div>
